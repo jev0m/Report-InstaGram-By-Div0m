@@ -8,15 +8,14 @@ import os,requests
 r = requests.session()
 
 def baha():
-    uuid = str(os.geteuid()) + str(os.getlogin())
-    id = "-".join(uuid)
-    print("\x1b[37;1mYour ID : "+id)
-    req = requests.get('https://pastebin.com/mRqFXTH9').text
-    if id in req:
-           print("\x1b[37;1mYOUR ID IS ACTIVE.........")
-           pass           
-    else:
-        print("\x1b[37;1mYOUR ID IS NOT ACTIVE.........")
+ uuid = str(os.geteuid()) + str(os.getlogin())
+ id = "-".join(uuid)
+print("Your ID : "+id)
+req = requests.get('https://pastebin.com/mRqFXTH9').text
+if id in req:
+    pass
+else:
+    print("Your Not Member")
         
 
 
