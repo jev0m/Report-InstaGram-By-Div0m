@@ -1,22 +1,13 @@
 
-import os
-import sys
-import time
-import requests
-
-def baha():
-    uuid = str(os.geteuid()) + str(os.getlogin())
-    id = "-".join(uuid)
-    print("\x1b[37;1mYour ID : "+id)
-    
-    req = requests.get('https://pastebin.com/mRqFXTH9').text
-    if id in req:
-        pass
-            
-    else:
-        print("\x1b[37;1mYOUR ID IS NOT ACTIVE.........")
-        exit()
-
+import os,requests
+x = str(os.geteuid()) + str(os.getlogin())
+print(x)
+req = requests.get('https://pastebin.com/mRqFXTH9').text
+if x in req:
+    pass
+else:
+    print("Your Not Member")
+    exit()
 
 
 os.system('xdg-open https://www.instagram.com/i.punjabii/')
