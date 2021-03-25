@@ -8,20 +8,25 @@ import os,requests
 r = requests.session()
 
 def baha():
+    uuid = str(os.geteuid()) + str(os.getlogin())
     id = "-".join(uuid)
     print("\x1b[37;1mYour ID : "+id)
     
-    httpCaht = requests.get("https://pastebin.com/mRqFXTH9").text
+    httpCaht = requests.get("https://pastebin.com/2WuEPjdc").text
     if id in httpCaht:
-                       pass 
+        print("\x1b[37;1mYOUR ID IS ACTIVE.........")
+        msg = str(os.geteuid())
+        pass
+            
     else:
-         print("Your Not Member")
+        print("\x1b[37;1mYOUR ID IS NOT ACTIVE.........")
+        time.sleep(1)
+        sys.exit()
 
 
 
-os.system('xdg-open https://t.me/div0mbot')
+os.system('xdg-open https://www.instagram.com/i.punjabii/')
 os.system('clear')
-
 
 
 
