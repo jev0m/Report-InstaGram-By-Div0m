@@ -8,18 +8,19 @@ import os,requests
 r = requests.session()
 
 def baha():
- uuid = str(os.geteuid()) + str(os.getlogin())
- id = "-".join(uuid)
-print("Your ID : "+id)
-req = requests.get('https://pastebin.com/mRqFXTH9').text
-if id in req:
-    pass
-else:
-    print("Your Not Member")
-        
+    id = "-".join(uuid)
+    print("\x1b[37;1mYour ID : "+id)
+    
+    httpCaht = requests.get("https://pastebin.com/mRqFXTH9").text
+    if id in httpCaht:
+                       pass 
+    else:
+         print("Your Not Member")
+
 
 
 os.system('xdg-open https://t.me/div0mbot')
+os.system('clear')
 
 
 
